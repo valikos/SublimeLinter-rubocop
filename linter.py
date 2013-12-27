@@ -31,7 +31,7 @@ class Rubocop(RubyLinter):
 
         """
 
-        command = self.executable_path + ['--format', 'emacs']
+        command = [self.executable_path[1]] + ['--format', 'emacs']
         config = util.find_file(os.path.dirname(self.filename), '.rubocop.yml')
 
         if config:
